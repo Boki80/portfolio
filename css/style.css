@@ -1,9 +1,23 @@
+/*
+%gradient-blue {
+    background: rgb(51,101,138);
+    background: linear-gradient(45deg, rgba(51,101,138,1) 0%, rgba(85,167,227,1) 100%);
+}
+*/
 body {
-  background: #33658a;
-  background: linear-gradient(45deg, #33658a 0%, #55a7e3 100%);
+  background-image: linear-gradient(to right top, #000000, #0b0b0b, #131313, #191919, #1f1f1f);
 }
 
 .text-center {
+  text-align: center;
+}
+
+.flex-center,
+.show-nav {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100vh;
   text-align: center;
 }
 
@@ -46,7 +60,7 @@ body {
 .ham {
   width: 40px;
   height: 5px;
-  background: #fff;
+  background: #c1c1c1;
   margin: 0 0 7px 0;
 }
 
@@ -56,15 +70,14 @@ body {
 
 ul.nav {
   width: 100%;
-  height: 100vh;
   background: #000;
   text-align: center;
   line-height: 4rem;
   font-size: 2rem;
   font-weight: 400;
-  padding: 10vh 0 0 0;
   position: fixed;
   z-index: 1;
+  list-style: none;
 }
 ul.nav li a {
   color: #fff;
@@ -75,28 +88,26 @@ ul.nav li a:hover {
   color: #93A8AC;
 }
 
-.container {
-  text-align: center;
-  padding: 20rem 0 0 0;
-}
-
 .me {
-  color: #fff;
+  color: #c1c1c1;
+  align-self: center;
+  /* text-transform: uppercase; */
 }
 .me h1, .me h2, .me h3 {
   font-weight: 400;
 }
 .me h1 {
-  font-size: 3rem;
-  line-height: 5rem;
+  font-size: 5rem;
+  line-height: 10rem;
+  /* letter-spacing: 4rem; */
 }
 .me h2 {
-  font-size: 2rem;
-  line-height: 4rem;
+  font-size: 2.5rem;
+  line-height: 5rem;
 }
 .me h3 {
   font-size: 1.5rem;
-  line-height: 3.5rem;
+  line-height: 3rem;
 }
 
 .portfolio {
@@ -115,6 +126,8 @@ ul.nav li a:hover {
 }
 .portfolio .portfolio-card img {
   width: 100%;
+  max-height: 50vw;
+  object-fit: cover;
   opacity: 1;
   display: block;
   backface-visibility: hidden;

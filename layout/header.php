@@ -2,7 +2,7 @@
     <head>
         <link href="css/style.css" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
-        <title>BojanDev - Full Stack Developer</title>
+        <title>Bojan Dev - Full Stack Developer</title>
     </head>
     <body>
         <nav>
