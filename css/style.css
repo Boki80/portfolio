@@ -8,6 +8,11 @@ body {
   background-image: linear-gradient(to right top, #000000, #0b0b0b, #131313, #191919, #1f1f1f);
 }
 
+.contact form input[type=submit], .contact form textarea[type=submit], .tools .card, .elements ul li a, .portfolio ul .card a, .tools ul .card a, .portfolio ul .card .img-menu, .tools ul .card .img-menu, .portfolio ul .card img, .tools ul .card img, .portfolio ul .card, .tools ul .card {
+  -webkit-transition: all ease-in-out 0.3s;
+  transition: all ease-in-out 0.3s;
+}
+
 .text-center {
   text-align: center;
 }
@@ -45,6 +50,11 @@ body {
 
 body {
   color: #fff;
+}
+
+.portfolio, .about, .elements, .tools, .contact {
+  text-align: center;
+  padding: 1rem;
 }
 
 .hamburger {
@@ -110,21 +120,17 @@ ul.nav li a:hover {
   line-height: 3rem;
 }
 
-.portfolio {
-  text-align: center;
-  padding: 1rem;
+.portfolio ul, .tools ul {
+  list-style: none;
 }
-.portfolio .portfolio-card {
+.portfolio ul .card, .tools ul .card {
   background: #e8e8e8;
   position: relative;
   color: #33658A;
   margin: 1rem 0;
-  border-radius: 5px;
-  -webkit-box-shadow: 0px 0px 7px 0px rgba(0, 0, 0, 0.75);
-  -moz-box-shadow: 0px 0px 7px 0px rgba(0, 0, 0, 0.75);
-  box-shadow: 0px 0px 7px 0px rgba(0, 0, 0, 0.75);
+  border-radius: 2px;
 }
-.portfolio .portfolio-card img {
+.portfolio ul .card img, .tools ul .card img {
   width: 100%;
   max-height: 50vw;
   object-fit: cover;
@@ -132,7 +138,7 @@ ul.nav li a:hover {
   display: block;
   backface-visibility: hidden;
 }
-.portfolio .portfolio-card .img-menu {
+.portfolio ul .card .img-menu, .tools ul .card .img-menu {
   transition: 0.5s ease;
   opacity: 0;
   position: absolute;
@@ -142,18 +148,18 @@ ul.nav li a:hover {
   -ms-transform: translate(-50%, -50%);
   text-align: center;
 }
-.portfolio .portfolio-card:hover img {
+.portfolio ul .card:hover img, .tools ul .card:hover img {
   opacity: 0.3;
 }
-.portfolio .portfolio-card:hover .img-menu {
+.portfolio ul .card:hover .img-menu, .tools ul .card:hover .img-menu {
   opacity: 1;
 }
-.portfolio .portfolio-card h1 {
+.portfolio ul .card h1, .tools ul .card h1 {
   font-size: 2rem;
   font-weight: 400;
   line-height: 5rem;
 }
-.portfolio .portfolio-card a {
+.portfolio ul .card a, .tools ul .card a {
   background: #33658A;
   color: #fff;
   display: inline-block;
@@ -161,15 +167,71 @@ ul.nav li a:hover {
   padding: 1rem 2rem;
   text-decoration: none;
   text-transform: uppercase;
-  border-radius: 2px;
-  -webkit-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.5);
-  -moz-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.5);
-  box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.5);
-  -webkit-transition: background-color ease-in-out 0.2s;
-  transition: background-color ease-in-out 0.2s;
 }
-.portfolio .portfolio-card a:hover {
+.portfolio ul .card a:hover, .tools ul .card a:hover {
   background: #3d79a5;
+}
+
+.about {
+  line-height: 2.2rem;
+  font-size: 1.2rem;
+}
+
+.elements ul {
+  list-style: none;
+}
+.elements ul li a {
+  background: #c1c1c1;
+  color: #33658A;
+  font-size: 2rem;
+  font-weight: 400;
+  text-decoration: none;
+  display: block;
+  margin: 0 0 1rem 0;
+  padding: 2rem 0;
+  border-radius: 2px;
+}
+.elements ul li a:hover {
+  background: #fff;
+}
+.elements ul :last-child a {
+  margin: 0;
+}
+
+.tools .card .img {
+  opacity: 1;
+}
+.tools .card .img-menu {
+  opacity: 0.8;
+}
+
+.contact form input, .contact form textarea {
+  width: 100%;
+  height: 2rem;
+  background: transparent;
+  color: #fff;
+  border: 1px solid #c1c1c1;
+  margin: 1rem 0 2rem 0;
+  padding: 1.5rem;
+  font-size: 1.2rem;
+  border-radius: 2px;
+}
+.contact form input:active, .contact form input:hover, .contact form textarea:active, .contact form textarea:hover {
+  border: 1px solid #93A8AC;
+}
+.contact form input[type=submit], .contact form textarea[type=submit] {
+  border: 1px solid #33658A;
+  padding: 1.5rem 0 3rem 0;
+}
+.contact form input[type=submit]:hover, .contact form textarea[type=submit]:hover {
+  background: #93A8AC;
+  border: 1px solid #93A8AC;
+}
+.contact form textarea {
+  height: 8rem;
+}
+.contact form label {
+  font-size: 1.5rem;
 }
 
 /*# sourceMappingURL=style.css.map */
